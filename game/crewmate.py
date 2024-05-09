@@ -68,6 +68,15 @@ class CrewMate(Context, superclasses.CombatCritter):
             self.sick = False
             announce (self.name + " takes the medicine and is no longer sick!")
 
+    #Add handling for armor here
+    #Not sure if passing in proper variables
+    def armor_handling(self):
+        '''Checks if pirate is wearing armor. If so, inflicted damage is halved'''
+        if "shogun armor" in self.items:
+            self.defender.inflict_damage = self.inflict_damage()/2
+
+
+
     def inflict_damage (self, num, deathcause, combat=False):
         '''Injures the pirate. If needed, it will record the pirate's cause of death'''
         if combat and len(self.defenders) > 0:

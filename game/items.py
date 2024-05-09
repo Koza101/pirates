@@ -85,3 +85,34 @@ class Flintlock(Item):
         self.skill = "guns"
         self.verb = "shoot"
         self.verb2 = "shoots"
+
+#Better Cutlas
+class Katana(Item):
+    def __init__(self):
+        super().__init__("katana", 500)
+        self.damage = (20, 100) #First value verb, second value verb2
+        self.skill = "swords"
+        self.verb = "slash"
+        self.verb2 = "slashes"
+        
+    #Debuff incoming Damage
+class ShogunArmor(Item):
+    def __init__(self):
+        super().__init__("shogun armor", 800)
+        
+
+
+
+class Tanto(Item):
+    def __init__(self):
+        super().__init__("tanto knife", 400)
+        self.damage = (10, 40)
+        self.skill = "swords"
+        self.verb = "swipe"
+        self.verb2 = "stab"
+        
+
+class CeremonialTea(Item):
+    def __init__(self):
+        super().__init__("ceremonial tea", 50)
+        
